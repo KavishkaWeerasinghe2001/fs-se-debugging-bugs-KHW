@@ -91,7 +91,7 @@ const activityLog = document.getElementById("activityLog");
 let checks = loadChecks();
 let currentView = checks;
 
-form.addEventListener("submit", (event) => handleAddChek(event)); // Intentional bug: misspelled function name.
+form.addEventListener("submit", (event) => handleAddCheck(event)); // Intentional bug: misspelled function name.
 searchInput.addEventListener("input", applyFilters);
 statusFilter.addEventListener("change", applyFilters);
 priorityFilter.addEventListener("change", applyFilters);
@@ -210,12 +210,12 @@ function renderRows(list) {
           <span class="row-actions">
             <select data-status-id="${check.id}" aria-label="Update status for ${escapeHtml(check.title)}">
               ${["Pending", "In Progress", "Fixed", "Blocked"]
-                .map(
-                  (status) => `
+        .map(
+          (status) => `
                 <option value="${status}" ${status === check.status ? "selected" : ""}>${status}</option>
               `,
-                )
-                .join("")}
+        )
+        .join("")}
             </select>
             <button class="icon-button" type="button" data-remove-id="${check.id}" title="Delete check">
               x
