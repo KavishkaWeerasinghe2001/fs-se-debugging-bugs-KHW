@@ -237,8 +237,8 @@ logActivity(`Changed "${check.title}" to ${check.status}.`);
 - Broken constants:
 
 ```js
-const STORAGE_SAVE_KEY = "launchdesk-v1-items";
-const STORAGE_LOAD_KEY = "launchdesk-items-v1";
+const STORAGE_KEY = "launchdesk-v1-items";
+const STORAGE_KEY = "launchdesk-items-v1";
 ```
 
 - Fix:
